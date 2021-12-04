@@ -7,7 +7,7 @@ router.get("/", (req, res, next) => {
 });
 
 router.post("/", (req, res, next) => {
-  res.status(200).json({ message: "Handling POST requests to /products" });
+  res.status(201).json({ message: "Handling POST requests to /products" });
 });
 
 router.get("/:productID", (req, res, next) => {
@@ -22,6 +22,18 @@ router.get("/:productID", (req, res, next) => {
       message: "You passed an ID",
     });
   }
+});
+
+router.patch("/:productID", (req, res, next) => {
+  res.status(200).json({
+    message: "Updated product!",
+  });
+});
+
+router.delete("/:productID", (req, res, next) => {
+  res.status(200).json({
+    message: "Deleted product!",
+  });
 });
 
 module.exports = router;
