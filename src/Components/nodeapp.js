@@ -7,9 +7,12 @@ const mongoose = require("mongoose");
 const productRoutes = require("../api/routes/products");
 const orderRoutes = require("../api/routes/orders");
 
+// mongoose.connect(
+//   "mongodb+srv://CaptSoda:V4l4rD0haeri5%@cluster0.tsnrr.mongodb.net/dbpets?retryWrites=true&w=majority"
+// );
+
 mongoose.connect(
-  "mongodb+srv://CaptSoda:V4l4rD0haeri5%@cluster0.tsnrr.mongodb.net/dbpets?retryWrites=true&w=majority",
-  { useMongoClient: true }
+  "mongodb+srv://CaptSoda:V4l4rM0rghuli5@cluster0.tsnrr.mongodb.net/dbpets?retryWrites=true&w=majority"
 );
 
 nodeapp.use(morgan("dev"));
