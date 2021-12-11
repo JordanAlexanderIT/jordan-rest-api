@@ -6,10 +6,7 @@ const mongoose = require("mongoose");
 
 const productRoutes = require("../api/routes/products");
 const orderRoutes = require("../api/routes/orders");
-
-// mongoose.connect(
-//   "mongodb+srv://CaptSoda:V4l4rD0haeri5%@cluster0.tsnrr.mongodb.net/dbpets?retryWrites=true&w=majority"
-// );
+const userRoutes = require("../api/routes/user");
 
 mongoose.connect(
   "mongodb+srv://CaptSoda:V4l4rM0rghuli5@cluster0.tsnrr.mongodb.net/dbpets?retryWrites=true&w=majority"
@@ -34,6 +31,7 @@ nodeapp.use((req, res, next) => {
 
 nodeapp.use("/products", productRoutes);
 nodeapp.use("/orders", orderRoutes);
+nodeapp.use("/user", userRoutes);
 
 nodeapp.use((req, res, next) => {
   const error = new Error("Not Found");
